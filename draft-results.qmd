@@ -5,9 +5,9 @@ editor:
     wrap: 72
 ---
 
-# Results 
+# Results
 
-## Descriptive Statistics 
+## Descriptive Statistics
 
 In my analysis I worked with two datasets from the U.S. Bureau of Labor
 Statistics. I first used 2021-2022 data covering work injuries and
@@ -91,16 +91,18 @@ assumed would all be office are definitely not office jobs, and there
 are probably other subsections that are office jobs that I'm missing.
 I'm not quite sure how to sort that problem out without manually combing
 through and deciding which industries should be considered office or
-not. Would this be a job appropriate to give to AI?
+not. Would this be a job appropriate to give to AI? I have all the code
+from my analysis in its own qmd file in github if you want to see how I
+was handling the NAICS stuff.
 
 \*\*End of Note
 
-### Total Recordable Injury Cases 
+### Total Recordable Injury Cases
 
-Non-office indutries experienced a average rate of 3.14 workplace
+Non-office industries experienced a average rate of 3.14 workplace
 injuries, and office industries experienced an average of 0.93 workplace
-injuries. On average, non-office jobs reported slightly over twice the
-number of total recordable cases compared to office jobs (Figure 3).
+injuries. On average, non-office jobs reported over thrice the number of
+total recordable cases compared to office jobs (Figure 3).
 
 ![](images/clipboard-3366280658.png)Figure 3: Average number of
 recordable injuries in both non-office and office industries in 2023
@@ -111,11 +113,11 @@ Non-office jobs also had a greater proportion of injuries resulting in
 time away from work. For non-office industries, the average number of
 injuries resulting in days away from work was 1.23. For office
 industries, the average was 0.35. Similarly to the total number of
-cases, the average for non-office industrues was about twice that of the
-office industries (Figure 4). This can be used to make inference on the
-average severity of the injuries that non-office workers and office
-workers are acquiring.
+cases, the average for non-office industries was about 3.5 times larger
+than that of the office industries (Figure 4). This can be used to make
+inference on the average severity of the injuries that non-office
+workers and office workers are acquiring.
 
 ![](images/clipboard-2258917691.png)Figure 4: Average number of 2023
-recordable injuries that resulted in days awasy from work in both
+recordable injuries that resulted in days away from work in both
 non-office and office industries
