@@ -2,38 +2,42 @@
 title: "analysis"
 ---
 
-Steps: 
-- Using CDC or BoS, find the difference between falls of office workers and non-office workers. See if I can identify where the numbers in the claims come from.
-- identify solid reason why that number is stupid as fuck to use (raw statistic)
-- break down of injuries for office workers
-- look into details of office worker falls, severity/cause
-  - maybe compare to severity of non-office worker injuries
-
-NAICS codes listed associated with "office" jobs:
-  - Information (NAICS 51)
-  - Finance and Insurance (NAICS 52)
-  - Real Estate, Rental, and Leasing (NAICS 53)
-  - Professional, Scientific, and Technical Services (NAICS 54)
-  - Management of Companies and Enterprises (NAICS 55)
-  - Administrative and Support Services (NAICS 561)
-
-```{r}
+```{r, setup, message=FALSE, warning=FALSE}
 library(readxl)
-injuries <- read_excel("~/Downloads/table-1-injury-and-illness-rates-by-industry-2023-national.xlsx")
 library(dplyr)
 library(ggplot2)
 library(tidyr)
+```
+
+Steps: - Using CDC or BoS, find the difference between falls of office workers and non-office workers. See if I can identify where the numbers in the claims come from. - identify solid reason why that number is stupid as fuck to use (raw statistic) - break down of injuries for office workers - look into details of office worker falls, severity/cause - maybe compare to severity of non-office worker injuries
+
+NAICS codes listed associated with "office" jobs:
+
+-   Information (NAICS 511, 517, 518, 519)
+
+-   Finance and Insurance (NAICS 521, 522, 523, 524)
+
+-   Real Estate, Rental, and Leasing (NAICS 531, 532)
+
+-   Professional, Scientific, and Technical Services (NAICS 541)
+
+-   Management of Companies and Enterprises (NAICS 551)
+
+-   Administrative and Support Services (NAICS 561)
+
+```{r data, warning=FALSE}
+injuries <- read_excel("~/Downloads/table-1-injury-and-illness-rates-by-industry-2023-national.xlsx")
 
 injuries <- injuries %>%
   rename(NAICS = 'NAICS code(3)',
          total_cases = 'Total recordable cases',
          total_w_days = `Cases with days away from work`) %>%
   mutate(total_cases = as.numeric(total_cases),
-         total_w_days = as.numeric(total_w_days)) %>%
-  filter(nchar(NAICS) == 3) %>%
-  mutate(across(everything(), ~ ifelse(is.na(.), 0, .)))
+         total_w_days = as.numeric(total_w_days),
+         across(everything(), ~ ifelse(is.na(.), 0, .))) %>%
+  filter(nchar(NAICS) == 3)
 
-office_codes <- c("^51", "^52", "^53", "^54", "^561")
+office_codes <- c("^511", "^517", "^518", "^519", "^521", "^522", "^523", "^524", "^531", "^532", "^541", "^551", "^561")
   
 office_jobs <- injuries %>%
   filter(grepl(paste(office_codes, collapse='|'), NAICS))
@@ -43,7 +47,8 @@ non_office_jobs <- injuries %>%
 ```
 
 Creating a graph by creating a dataframe with the total recordable cases between office and non-office fields
-```{r}
+
+```{r, dependson='data', cache=FALSE, warning=FALSE}
 office_summary <- office_jobs %>%
   summarize(avg_cases = mean(total_cases)) %>%
   mutate(category = "Office Jobs")
@@ -61,7 +66,8 @@ ggplot(injury_summary, aes(x = category, y = avg_cases, fill = category)) +
        y = "Average Cases") 
 ```
 
-I would like to compare the severity of injuries using this data too, so I'll compare the average number of cases with days away from work 
+I would like to compare the severity of injuries using this data too, so I'll compare the average number of cases with days away from work
+
 ```{r}
 office_w_days_summary <- office_jobs %>%
   summarize(avg_cases = mean(total_w_days)) %>%
@@ -80,15 +86,16 @@ ggplot(injury_w_days_summary, aes(x = category, y = avg_cases, fill = category))
        y = "Average Cases") 
 ```
 
-
 I would like to compare the number of falls between office industries and non-office industries
-```{r}
+
+```{r, message=FALSE}
 cases <- read_excel("~/Downloads/case-and-demographic-characteristics-table-r4-2021-2022.xlsx")
 
 cases <- cases %>%
   rename(NAICS = 'NAICS code(2)') %>%
   filter(nchar(NAICS) == 3) %>% 
-  mutate(across(everything(), ~ifelse(. == "-", "0", .)))
+  mutate(across(everything(), ~ifelse(. == "-", "0", .))) %>%
+  filter(duplicated(NAICS) == FALSE)
 
 fall_cases <- cases %>%
   select(`Industry(1)`, NAICS, `Total cases`, `Fall on same level`, `Slips, trips without fall`)
@@ -98,7 +105,11 @@ office_jobs <- fall_cases %>%
   
 non_office_jobs <- fall_cases %>%
   filter(!grepl(paste(office_codes, collapse='|'), NAICS))
+```
 
+for histogram
+
+```{r}
 office_summary <- office_jobs %>%
   mutate(total_cases = as.numeric(`Total cases`),
             total_falls = as.numeric(`Fall on same level`),
@@ -107,10 +118,7 @@ office_summary <- office_jobs %>%
             mean_falls = mean(total_falls),
             mean_slips = mean(total_slips)) %>%
   mutate(category = "Office")
-```
 
-for histogram
-```{r}
 non_office_summary <- non_office_jobs %>%
   mutate(total_cases = as.numeric(`Total cases`),
           total_falls = as.numeric(`Fall on same level`),
@@ -136,7 +144,8 @@ ggplot(cases_summary_long, aes(x = category, y = mean_value, fill = type)) +
 ```
 
 for barchart
-```{r}
+
+```{r, warning=FALSE}
 type_cases <- cases %>%
   select(-`Industry(1)`, -`Case type(3)`, -`Total cases`, -`Total...5`, -`Total...9`, -`Total...13`, -`Total...16`, -`Total...18`)
 
@@ -156,6 +165,4 @@ ggplot(type_totals, aes(x = reorder(Category, -Total), y = Total, fill = Categor
        x = "Category",
        y = "Total Cases") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
-
 ```
-

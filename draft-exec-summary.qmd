@@ -1,3 +1,11 @@
 ---
 title: "Draft: Executive Summary"
 ---
+
+First, let's understand this claim. "The CDC found that office workers are 2 to 2.5 times more likely to suffer an injury from a fall than non-office workers." This claim specifically means that given a worker has a fall, the office worker is more likely to suffer an injury than the non-office worker. We should consider many other factors about our work setting before jumping to any conclusions. How many falls total happen between office and non-office workers? What are the causes of the falls?
+
+We should consider the fact that many non-office workers may be more conscious of OSHA regulations, and therefore avoid falls. In fact, many industries filled predominantly by office jobs are partially exempt from OSHA record keeping because of the low incident rate @RecordkeepingNonMandatoryAppendix.
+
+In personal research of the CDC data, I was unable to track down where this claim about office falls originated or what data it may be based on. What I did find was Aftermath, a website for bio hazard cleaning services, making this claim and citing the CDC in 2013. I would advise against using statistics from 2013 or earlier as a basis for a current claim, especially since safety regulations and workplace settings have greatly evolved since then.
+
+That being said, looking further into why office workers may be more susceptible to fall injuries and see where most of the falls are caused by.

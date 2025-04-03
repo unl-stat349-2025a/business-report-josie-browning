@@ -1,3 +1,11 @@
 ---
 title: "Draft: Intro/Conclusions"
 ---
+
+# Introduction
+
+Safety in the workplace is the most important priority for any company to have. No matter the industry, location, or project, taking measures to ensure workers are not at risk of injury is a necessity. It is both the responsibility of management and workers to stay informed and up-to-date with safety regulations. These rules and regulations can look very different industry to industry. In an office setting, some may think safety is not a prioritized concern, but that is far from the truth. Falls are the leading cause of injuries in an office setting @SurveyOccupationalInjuries, and it is important to understand the risks, causes, and ways to reduce the probability of this type of injury.
+
+The Albert Einstein College of Medicine cited the Center of Disease Control and Prevention with the claim that "office workers are 2 to 2.5 times more likely to suffer an injury from a fall than non-office workers" @WhatAreTop2012.
+
+While the claim may have been true in 2012, based on my research and analysis of 2023 CDC data, non-office workers are about 1.5 times more likely to be injured from a fall than not an office worker. 
