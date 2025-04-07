@@ -46,7 +46,7 @@ non_office_jobs <- injuries %>%
   filter(!grepl(paste(office_codes, collapse='|'), NAICS))
 ```
 
-Creating a graph by creating a dataframe with the total recordable cases between office and non-office fields
+Creating a graph by creating a data frame with the total recordable cases between office and non-office fields
 
 ```{r, dependson='data', cache=FALSE, warning=FALSE}
 office_summary <- office_jobs %>%
