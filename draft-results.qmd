@@ -91,3 +91,15 @@ workers and office workers are acquiring.
 ![](images/clipboard-2258917691.png)Figure 4: Average number of 2023
 recordable injuries that resulted in days away from work in both
 non-office and office industries
+
+### Most Common Office Injuries
+
+By visualizing the total reported injury cases (Figure 5), we can see
+the which type of injuries are most common. Falls on the same level are
+the second most common injury type reported in office spaces with 30,960
+total cases in 2023.
+
+![](images/clipboard-3688385538.png)
+
+Figure 5: Total injury cases reported for office injuries by injury
+type. Only the 5 most common injury categories shown.

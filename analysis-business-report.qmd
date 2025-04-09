@@ -7,6 +7,7 @@ library(readxl)
 library(dplyr)
 library(ggplot2)
 library(tidyr)
+library(stringr)
 ```
 
 Steps: - Using CDC or BoS, find the difference between falls of office workers and non-office workers. See if I can identify where the numbers in the claims come from. - identify solid reason why that number is stupid as fuck to use (raw statistic) - break down of injuries for office workers - look into details of office worker falls, severity/cause - maybe compare to severity of non-office worker injuries
@@ -154,15 +155,25 @@ office_jobs <- type_cases %>%
   mutate_all(as.numeric) %>%
   select(-`NAICS`)
 
-type_totals <- office_jobs %>%
+type_totals_5 <- office_jobs %>%
+  summarise(across(everything(), sum, na.rm = TRUE)) %>%
+  pivot_longer(cols = everything(), names_to = "Category", values_to = "Total") %>%
+  slice_max(order_by = Total, n = 5) %>%
+  mutate(Category = str_wrap(Category, width = 15))
+
+# Plot the bar chart
+ggplot(type_totals_5, aes(x = reorder(Category, -Total), y = Total, fill = Category)) +
+  geom_bar(stat = "identity") +
+  labs(title = "Top 5 Most Common Office Injuries",
+       x = "Category",
+       y = "Total Cases") +
+  guides(fill = FALSE)
+
+total <- office_jobs %>%
   summarise(across(everything(), sum, na.rm = TRUE)) %>%
   pivot_longer(cols = everything(), names_to = "Category", values_to = "Total")
 
-# Plot the bar chart
-ggplot(type_totals, aes(x = reorder(Category, -Total), y = Total, fill = Category)) +
-  geom_bar(stat = "identity") +
-  labs(title = "Total Cases per Category",
-       x = "Category",
-       y = "Total Cases") +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+sum(total$Total)
+30960/167440
+
 ```
