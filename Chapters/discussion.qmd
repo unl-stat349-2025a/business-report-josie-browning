@@ -1,0 +1,33 @@
+---
+title: "Discussion"
+---
+
+# Discussion
+
+The evidence found using the US Bureau of Labor Statistics data supports an overwhelming conclusion that is opposite than that of the original claim. While the original CDC data was unavailable to public access, the available data used for this analysis is reliable and established.
+
+Using the 2023 survey of occupational injuries, I found that non-office workers are about 1.5 times more likely to suffer an injury from a fall, and also 1.4 times more likely to slip without falling than an office worker @SurveyOccupationalInjuries. This evidence directly opposes the original claim, and suggests that office workers are not at a higher risk of suffering injuries from falls than non-office workers. Generalizing to all types of injuries, I found that non-office industries have 3.3 times the number of recordable injuries compared to office industries @TABLE1Incidence. Similarly, the same data revealed that non-office industries had 3.3 times the number of recordable injuries that specifically required days away from work. The rate of recordable injuries and total recordable injuries with time away from work suggests that not only are non-office workers more likely to be injured at work, but also that the severity distribution of these injuries are higher than the injuries of office workers. This evidence combined builds a strong case against any claim that office workers are more likely to suffer an injury from a fall than a non-office worker.
+
+Here is another way to think about this main conclusion: If a construction site and an accounting office have the same number of falls, the severity of those falls likely vary drastically. In many ways, we would hope to see less falls in the construction site than the office, because of the associated risk in the setting. According to the CDC , we see the highest number of workplace falls and fall injuries in construction, educational and health services, ambulance services, building maintenance, and transportation services @cdcFallsWorkplace2024.
+
+We should consider the fact that many industries filled predominantly by office jobs are partially exempt from OSHA record keeping because of the low incident rate @RecordkeepingNonMandatoryAppendix. This may lead to a bias in the data regarding how many fall injuries are reported in office industries. On the other hand, many office workers may be less conscious of OSHA regulations, and therefore increase the likelihood of falls. Both these factors may lead to different kinds of bias in the data, which could be addressed in the future by more focused studies into office workplace injuries, and also a stress on following OSHA safety regulations in all workplaces.
+
+It should be acknowledged that the definition of "office" jobs and industries is, at times, subjective, and categorizing all the recognized NAICS industries into the two groups is not a perfect system. Some jobs, such as real estate, may require workers to have an office but also include extensive work outside an office. While there could be a debate on some industries being included or not, I believe the evidence is conclusive enough for the variability to not make a significant difference. Future work could compare results from different combinations of NAICS codes to see by how much the final conclusion changes.
+
+Despite the evidence that office workplaces are at much lower risk for falls and overall injuries, the second most common injury in offices is still falls on the same level @SurveyOccupationalInjuries. Given that an office industry reports an injury, there is about an 18.5% chance the injury is a fall on the same level. The CDC cites the following reasons as the most common causes of falls in the workplace @cdcFallsWorkplace2024:
+
+-   Unprotected edges
+
+-   Unsafely positioned ladders
+
+-   Misused fall protection
+
+-   Water, grease, and other contaminants on the floor
+
+-   Clutter and tripping hazards in walkways
+
+-   Irregularities in the floor and wall openings
+
+Appropriate steps taken in an office could greatly reduce the risk of any workers falling, such as safety training, proper use of ladders, and cleaning up/labeling any floor area with liquid on it. It is a company's responsibility to ensure all parts of the building are using accessible architecture (ramps, elevators, wide doorways, etc.) so no employees are put in a position to take unnecessary risks.
+
+This report concludes with strong evidence to say that office workers are not at a higher risk to suffer an injury from a fall than non-office workers. That being said, office workers still face the risk of injury if proper safety regulations are not followed. Every company highly values the well-being of their employees, and should always take the proper steps to ensure a comfortable and safe work environment.

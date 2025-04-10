@@ -10,6 +10,9 @@ book:
   chapters:
     - index.qmd
     - intro.qmd
+    - methods.qmd
+    - results.qmd
+    - discussion.qmd
     - summary.qmd
     - references.qmd
   appendices:

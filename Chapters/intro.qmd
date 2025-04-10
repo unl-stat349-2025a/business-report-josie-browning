@@ -1,0 +1,20 @@
+---
+title: "Introduction"
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+# Introduction
+
+Safety in the workplace is the most important priority for any company to have. No matter the industry, location, or project, taking measures to ensure workers are not at risk of injury is a necessity. It is both the responsibility of management and workers to stay informed and up-to-date with safety regulations. These rules and regulations can look very different industry to industry. In an office setting, some may think safety is not a prioritized concern, but that is far from the truth. Falls are the leading cause of injuries in an office setting @SurveyOccupationalInjuries, and it is important to understand the risks, causes, and ways to reduce the probability of this type of injury.
+
+A 2012 article from The Albert Einstein College of Medicine cited the Center of Disease Control and Prevention with the claim that "office workers are 2 to 2.5 times more likely to suffer an injury from a fall than non-office workers" @WhatAreTop2012. An analysis into this claim may reveal insight on the source and interpretation of the original CDC data. It is possible this claim has two slightly different meanings:
+
+1.  Office workers are more likely to suffer an injury given they had a fall compared to non-office workers.
+
+2.  Office workers are more likely to have a fall that results in an injury compared to non-office workers.
+
+In the original claim and this report, any reference to "falls" explicitly means falls on the same level, and excludes injuries resulting from falls to a different level (which are reported in separate categories in CDC and US Bureau survey data). The following analysis will compare the number of falls between office and non-office workers, and also the number of falls resulting in injury between the two groups. The difference between the two interpretations lead to two separate concerns: are office workers at higher risk of falling or higher risk of suffering an injury from a fall? It is also important to remember this data and claim is from 2012 at the latest, and the workplace has changed very much in the last decade.
+
+While the claim may have held truth at the time, based on my research and analysis of 2023 CDC data, this claim is false in both interpretations. Non-office workers are about 1.5 times more likely to suffer an injury from a fall than an office worker.
