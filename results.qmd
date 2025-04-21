@@ -1,0 +1,105 @@
+---
+title: "Results"
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+# Results
+
+## Descriptive Statistics
+
+In my analysis I worked with two datasets from the U.S. Bureau of Labor
+Statistics. I first used 2021-2022 data covering work injuries and
+illnesses detailed by source and industry [@SurveyOccupationalInjuries].
+Secondly, I examined workplace recordable injury rates by industry using
+2023 data [@TABLE1Incidence]. I categorized the data into office and
+non-office jobs based on the NAICS codes. I choose to make decisions on
+the 3-digit level of the codes, so there are several sub-industries with
+4 and 5-digit codes that are within the chosen "office" industries. The
+category of office jobs includes the following:
+
+-   Information (511, 517, 518, 519)
+
+-   Finance and Insurance (521, 522, 523, 524)
+
+-   Real Estate (531, 532)
+
+-   Legal Services and Accounting (541)
+
+-   Management (551)
+
+-   Administrative Support (561).
+
+I made the assumption that a blank observation (indicated by a dash)
+represented a zero, not an NA. Entries with actual NA values were
+removed.
+
+For the first dataset, there were 2936 raw observations, and 258
+sections at the 3-digit NAICS code level. After I split the data, there
+were 83 non-office industries and 13 office industries (listed above).
+
+For the second dataset, it contained 1074 raw observations, 87
+subsections with 74 non-office and 13 office.
+
+## Primary Findings
+
+### Mean Slips and Falls
+
+The definition of "slips" in this dataset is a trip without a fall,
+which I believe is still relevant to the company's concern of
+fall-related safety. To reiterate, this dataset only records incidents
+that result in days away from work or job restriction, which I am
+generalizing to mean the incidents resulted in injury.
+
+In 2023, the mean number of falls in non-office industries was 3361, and
+the mean for office industries was 2116. The mean number of slips in
+non-office industries was 949, and the mean was 695 for office
+industries (Figure 1). Non-office had, on average, about 1.5 times the
+number of falls and about 1.4 times more slips. This contradicts the
+previous claim of office workers being 2 to 2.5 times more likely than
+non-office workers to suffer an injury from a fall.
+
+![](images/clipboard-3063715368.png)
+
+Figure 1: The mean number of slips and falls for both non-office and
+office industries. The mean number of falls/slips can also be
+interpreted as the mean number of injuries resulting from a workplace
+fall/slip.
+
+### Total Recordable Injury Cases
+
+Non-office industries experienced a average rate of 3.06 workplace
+injuries, and office industries experienced an average of 0.93 workplace
+injuries. On average, non-office jobs reported was about 3.3 times the
+number of total recordable cases compared to office jobs (Figure 3).
+
+![](images/clipboard-3366280658.png)Figure 3: Average number of
+recordable injuries in both non-office and office industries in 2023
+
+### Injury Severity (Cases with Days Away from Work)
+
+Non-office jobs also had a greater proportion of injuries resulting in
+time away from work. For non-office industries, the average number of
+injuries resulting in days away from work was 1.20. For office
+industries, the average was 0.36. Similarly to the total number of
+cases, the average for non-office industries was about 3.3 times larger
+than that of the office industries (Figure 4). This can be used to make
+inference on the average severity of the injuries that non-office
+workers and office workers are acquiring.
+
+![](images/clipboard-2258917691.png)Figure 4: Average number of 2023
+recordable injuries that resulted in days away from work in both
+non-office and office industries
+
+### Most Common Office Injuries
+
+By visualizing the total reported injury cases (Figure 5), we can see
+the which type of injuries are most common. Falls on the same level are
+the second most common injury type reported in office spaces with 30,960
+total cases in 2023.
+
+![](images/clipboard-3688385538.png)
+
+Figure 5: Total injury cases reported for office injuries by injury
+type. Only the 5 most common injury categories shown.

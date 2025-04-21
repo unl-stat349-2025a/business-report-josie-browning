@@ -1,0 +1,73 @@
+---
+title: "Draft: Data Documentation"
+---
+
+# Data Sources
+
+1.  Survey of Occupational Injuries and Illnesses Data - R4 Detailed Industry by Selected Events or Exposures, 2021-22
+
+    [XLSX](https://www.bls.gov/iif/nonfatal-injuries-and-illnesses-tables/case-and-demographic-characteristics-table-r4-2021-2022.xlsx)
+
+    **Overview**: Number of recorded injuries sectioned by industry and injury type. Industries are indicated by NAICS codes and broken down into subsections. The report of injuries are detailed by type of injury, which is also divided into subsections. It is important to note that observations consists of both totals and individual section injury numbers.
+
+    **Variables of Interest**:
+
+    -   Falls on the Same Level: The number of reported falls on the same level for a given industry between 2021-2022, notably different than falls to a lower level. Falls to a lower level refer to falls from an elevated height. In this report we are only interested in falls on the same level.
+
+    -   Slips and Trips without Fall: The number of near-falls, which can still result in injury and often are caused by the same hazards that cause falls on the same level.
+
+    **Source**: U.S. Bureau of Labor Statistics
+
+2.  Injury Incidence Rates - TABLE 1. Incidence Rates of Nonfatal Occupational Injuries and Illnesses by Industry and Case Types, 2023
+
+    [Link](https://www.bls.gov/web/osh/table-1-industry-rates-national.htm)
+
+    **Overview**: Number of recorded injuries by industry and case type. The industries are identified by the same NAICS codes as the R4 dataset. This dataset includes the overall total (rates are per 100 people), and the cases where injuries required time away from work.
+
+    **Variables of Interest**:
+
+    -   Total Recordable Cases: This is the total number of injuries that were reported in a given industry for 2023. I am interested in comparing the total number of injuries between office and non-office industries.
+
+    -   Cases with Days Away From Work: This variable is of interest as a measure of severity of injuries. I am making an assumption that a injury requiring time away from work indicates a higher severity injury. I am interested in comparing this variable between office and non-office industries.
+
+    **Source**: U.S. Bureau of Labor Statistics
+
+# Article Sources
+
+1.  Source Office Injury Statistics - Rethink What You Know About Office Injuries
+
+    [Link](https://web.archive.org/web/20240420075620/https://www.aftermath.com/content/office-injury-statistics/)
+
+    **Overview**: States common causes and statistics of office injuries. They make the claim that falling is the most common office related accident, and that office workers are 2 to 2.5 times more likely to suffer an injury than a non-office worker (citing the CDC). It also defined what office falls include.
+
+    **Source**: Aftermath
+
+2.  Non-Fatal Occupational Falls on the Same Level
+
+    [Link](https://pmc.ncbi.nlm.nih.gov/articles/PMC3578063/)
+
+    **Overview**: Comparing falls between industries, and categorizing falls that are "on the same level". It looks at differences in injuries between males and females, as well as by age and industry. Within each fall category, it also logs compensation costs that resulted from occupational falls.
+
+    **Source**: National Library of Medicine
+
+3.  OSHA
+
+    1.  Partially Exempt Industries
+
+        [Link](https://www.osha.gov/recordkeeping/presentations/exempttable)
+
+        **Overview**: A list of industries that are partially exempt from OSHA, meaning they are not required to keep injury and illness records. This is relevant because it may cause gaps in numbers on industry injury records. Notably, many of the exempt employers can be categorized as office jobs.
+
+    2.  Census of Fatal Occupational Injuries Summary, 2023
+
+        [Link](https://www.bls.gov/news.release/cfoi.nr0.htm)
+
+        **Overview**: Commonly used statistics over fatal occupation injuries, broken into categorical statistics about work characteristics, private industries and occupation. This is a good source when comparing fatal injuries and non-fatal injuries in office settings.
+
+4.  Injuries, Illnesses, and Fatalities
+
+    [Link](https://www.bls.gov/iif/home.htm)
+
+    **Overview**: Numbers and charts on total nonfatal work injury and illnesses (specifically in private industries).
+
+    **Source**: U.S. Bureau of Labor Statistics

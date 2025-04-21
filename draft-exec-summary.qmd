@@ -1,0 +1,9 @@
+---
+title: "Draft: Executive Summary"
+---
+
+For the last sixty years, Halpert & Co. has prioritized the safety of its employees in all areas of the company. Due to a discovered research claim, there has been a recent rise in concern about the risk of injury in office spaces. A 2012 article from The Albert Einstein College of Medicine cited the Center for Disease Control and Prevention claiming that, "office workers are 2 to 2.5 times **more** likely to suffer an injury from a fall than non-office workers" [@WhatAreTop2012].
+
+By analyzing 2023 survey data from the US Bureau of Labor Statistics, I found an opposing result of office workers being about 1.5 times **less** likely to suffer an injury from a fall than a non-office worker [@SurveyOccupationalInjuries]. Overall, non-office industries report 3.3 times the number of injuries as office industries and 3.3 times the number of injuries that result in needing time away from work [@TABLE1Incidence]. This result strongly suggests that non-office workers are at higher risk of being injured and suffering an injury of higher severity.
+
+Despite the conclusion that office workers are at lower risk of injuries and falls, stronger safety policies in office spaces would not be a waste of time or resources. About 18.5% of all reported office injuries are falls on the same level, with the most common causes of the fall being misusing ladders, water or contaminants on floors, and tripping hazards in walkways [@cdcFallsWorkplace2024]. Implementing safety training to use equipment and proper handling of spills and clutter hazards can significantly reduce the risk of fall injuries in the office.
