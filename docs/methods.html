@@ -20,6 +20,25 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
 </style>
 
 
@@ -163,7 +182,23 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#methods" id="toc-methods" class="nav-link active" data-scroll-target="#methods"><span class="toc-section-number">3</span>  Methods</a>
+  <ul class="collapse">
+  <li><a href="#data-sources" id="toc-data-sources" class="nav-link" data-scroll-target="#data-sources"><span class="toc-section-number">3.1</span>  Data Sources</a></li>
+  <li><a href="#classification-method" id="toc-classification-method" class="nav-link" data-scroll-target="#classification-method"><span class="toc-section-number">3.2</span>  Classification Method</a></li>
+  <li><a href="#data-cleaning-and-assumption" id="toc-data-cleaning-and-assumption" class="nav-link" data-scroll-target="#data-cleaning-and-assumption"><span class="toc-section-number">3.3</span>  Data Cleaning and Assumption</a></li>
+  <li><a href="#analysis" id="toc-analysis" class="nav-link" data-scroll-target="#analysis"><span class="toc-section-number">3.4</span>  Analysis</a>
+  <ul class="collapse">
+  <li><a href="#libraries" id="toc-libraries" class="nav-link" data-scroll-target="#libraries"><span class="toc-section-number">3.4.1</span>  Libraries</a></li>
+  <li><a href="#process" id="toc-process" class="nav-link" data-scroll-target="#process"><span class="toc-section-number">3.4.2</span>  Process</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -185,9 +220,62 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>methods</p>
+<section id="methods" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Methods</h1>
+<section id="data-sources" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="data-sources"><span class="header-section-number">3.1</span> Data Sources</h2>
+<p>In my analysis I worked with two datasets from the U.S. Bureau of Labor Statistics. I first used the Survey of Occupational Injuries and Illnesses data, which covers reported work-related injuries and are detailed by source and industry <span class="citation" data-cites="SurveyOccupationalInjuries">(<a href="references.html#ref-SurveyOccupationalInjuries" role="doc-biblioref">U.S. Bureau of Labor Statistics 2021</a>)</span>. This data is collected biennually, and the most recently available data is 2021-2022. I used this data to identify the specific number of injuries sustained by office workers in this time period, and further identified the injuries related to falls, trips, and slips. With these detailed variables in the dataset, I was able to compare the number of fall-related injuries between “office” and “non-office” industries.</p>
+<p>Secondly, I examined the Injury Incidence Rates in workplaces detailed by industry and case type <span class="citation" data-cites="TABLE1Incidence">(<a href="references.html#ref-TABLE1Incidence" role="doc-biblioref">U.S. Bureau of Labor Statistics 2023</a>)</span>. This data includes injuries reported in 2023 that involved time away from work, which I used as a measure of severity in the work-related injuries. By looking at the total injuries reported, I was able to compare the number of “severe” injuries between “office” and “non-office” industries.</p>
+<p>The U.S. Bureau of Labor Statistics used the North American Industry Classification System (NAICS). These codes easily identify industries on both a broad and specific level, depending on the number of digits in the code (2-6). This code is how I defined “office” and “non-office” industry.</p>
+<p>An important note about both these dataset is that they include hierarchical entries, meaning some rows represent aggregate totals for a broader industry, followed by rows that represent subindustry counts. In these cases, the broader row count represents the sum of all subsequent subindustries. For my analysis, only one specified level of data was used to avoid double-counting.</p>
+</section>
+<section id="classification-method" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="classification-method"><span class="header-section-number">3.2</span> Classification Method</h2>
+<p>To categorize the industry using NAICS codes, I choose to section the industies on the 3-digit level of the codes, so the several subindustries with 4,5, or 6 digit codes are grouped in with their respective broader industry. The categories of “office” industries includes the following:</p>
+<ul>
+<li><p>Information (511, 517, 518, 519)</p></li>
+<li><p>Finance and Insurance (521, 522, 523, 524)</p></li>
+<li><p>Real Estate (531, 532)</p></li>
+<li><p>Legal Services and Accounting (541)</p></li>
+<li><p>Management (551)</p></li>
+<li><p>Administrative Support (561).</p></li>
+</ul>
+<p>I choose these codes based off of research and inspection of the code list in the dataset. These decisions are subjective, and all jobs in each industry may not all be true office jobs. There are also likely specific office jobs that are within many other “non-office” industries. It is important to acknowledge that cleanly dividing this data into “office” and “non-office” categories is imperfect, and further analysis with more precise measures could produce slightly different results.</p>
+</section>
+<section id="data-cleaning-and-assumption" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="data-cleaning-and-assumption"><span class="header-section-number">3.3</span> Data Cleaning and Assumption</h2>
+<p>When starting the analysis, I made the assumption that a blank observation (indicated by a dash) represented a zero, not an NA. Entries with actual NA values were removed. There were 186 observations that were removed (on raw data, prior to sectioning with NAICS codes).</p>
+<p>For clarity and convenience, I renamed several columns to have shorter names without spaces in them. To section the data by NAICS codes, I filtered the variable for only 3-digit observations, and then split the data using the list of 13 predecided codes.</p>
+<p>For the first dataset, there were 2936 raw observations, and 96 sections at the 3-digit NAICS code level. After I split the data, there were 83 “non-office” industries and 13 “office” industries (listed above). For the second dataset, it contained 1074 raw observations, 87 subsections with 74 “non-office” and 13 “office”.</p>
+</section>
+<section id="analysis" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="analysis"><span class="header-section-number">3.4</span> Analysis</h2>
+<section id="libraries" class="level3" data-number="3.4.1">
+<h3 data-number="3.4.1" class="anchored" data-anchor-id="libraries"><span class="header-section-number">3.4.1</span> Libraries</h3>
+<p>I used the following libraries in R studio for my analysis:</p>
+<ul>
+<li><p>Readxl: This library allowed me to read in and use both my datasets, which were provided by the BLS in excel files.</p></li>
+<li><p>Dplyr: I used this library for the majority of my data handling, specifically the mutate statement which allowed me to easily manipulate dataframes. The filter and summarize statements were also extremely useful to sectioning the data into “office” and “non-office” dataframes.</p></li>
+<li><p>Ggplot2: I used the visualization terms in this library to create all graphs used in my analysis.</p></li>
+<li><p>Tidyr: This library has a function “pivot_longer” that I used in one case to reshape a dataframe for easier visualization.</p></li>
+<li><p>Stringr: I used one function “slice_max” to select a certain number of observation from a dataframe. Just like with the tidyr function, I used stringr for reshaping data for easier visualization.</p></li>
+</ul>
+</section>
+<section id="process" class="level3" data-number="3.4.2">
+<h3 data-number="3.4.2" class="anchored" data-anchor-id="process"><span class="header-section-number">3.4.2</span> Process</h3>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="ref-SurveyOccupationalInjuries" class="csl-entry" role="doc-biblioentry">
+U.S. Bureau of Labor Statistics. 2021. <span>“Survey of Occupational Injuries and Illnesses Data.”</span> <em>By Industry: R4 Detailed Industry by Selected Events or Exposures, 2021-22</em>. <a href="https://www.bls.gov/iif/nonfatal-injuries-and-illnesses-tables.htm">https://www.bls.gov/iif/nonfatal-injuries-and-illnesses-tables.htm</a>.
+</div>
+<div id="ref-TABLE1Incidence" class="csl-entry" role="doc-biblioentry">
+———. 2023. <span>“Injury Incidence Rates.”</span> <em>TABLE 1. Incidence Rates of Nonfatal Occupational Injuries and Illnesses by Industry and Case Types, 2023</em>. <a href="https://www.bls.gov/web/osh/table-1-industry-rates-national.htm">https://www.bls.gov/web/osh/table-1-industry-rates-national.htm</a>.
+</div>
+</div>
+</section>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

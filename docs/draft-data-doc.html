@@ -163,7 +163,14 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#data-sources" id="toc-data-sources" class="nav-link active" data-scroll-target="#data-sources"><span class="toc-section-number">B</span>  Data Sources</a></li>
+  <li><a href="#article-sources" id="toc-article-sources" class="nav-link" data-scroll-target="#article-sources"><span class="toc-section-number">C</span>  Article Sources</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -185,8 +192,33 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<section id="data-sources" class="level1" data-number="B">
+<h1 data-number="B"><span class="header-section-number">B</span> Data Sources</h1>
 <ol type="1">
-<li><p>Office Injury Statistics - Rethink What You Know About Office Injuries</p>
+<li><p>Survey of Occupational Injuries and Illnesses Data - R4 Detailed Industry by Selected Events or Exposures, 2021-22</p>
+<p><a href="https://www.bls.gov/iif/nonfatal-injuries-and-illnesses-tables/case-and-demographic-characteristics-table-r4-2021-2022.xlsx">XLSX</a></p>
+<p><strong>Overview</strong>: Number of recorded injuries sectioned by industry and injury type. Industries are indicated by NAICS codes and broken down into subsections. The report of injuries are detailed by type of injury, which is also divided into subsections. It is important to note that observations consists of both totals and individual section injury numbers.</p>
+<p><strong>Variables of Interest</strong>:</p>
+<ul>
+<li><p>Falls on the Same Level: The number of reported falls on the same level for a given industry between 2021-2022, notably different than falls to a lower level. Falls to a lower level refer to falls from an elevated height. In this report we are only interested in falls on the same level.</p></li>
+<li><p>Slips and Trips without Fall: The number of near-falls, which can still result in injury and often are caused by the same hazards that cause falls on the same level.</p></li>
+</ul>
+<p><strong>Source</strong>: U.S. Bureau of Labor Statistics</p></li>
+<li><p>Injury Incidence Rates - TABLE 1. Incidence Rates of Nonfatal Occupational Injuries and Illnesses by Industry and Case Types, 2023</p>
+<p><a href="https://www.bls.gov/web/osh/table-1-industry-rates-national.htm">Link</a></p>
+<p><strong>Overview</strong>: Number of recorded injuries by industry and case type. The industries are identified by the same NAICS codes as the R4 dataset. This dataset includes the overall total (rates are per 100 people), and the cases where injuries required time away from work.</p>
+<p><strong>Variables of Interest</strong>:</p>
+<ul>
+<li><p>Total Recordable Cases: This is the total number of injuries that were reported in a given industry for 2023. I am interested in comparing the total number of injuries between office and non-office industries.</p></li>
+<li><p>Cases with Days Away From Work: This variable is of interest as a measure of severity of injuries. I am making an assumption that a injury requiring time away from work indicates a higher severity injury. I am interested in comparing this variable between office and non-office industries.</p></li>
+</ul>
+<p><strong>Source</strong>: U.S. Bureau of Labor Statistics</p></li>
+</ol>
+</section>
+<section id="article-sources" class="level1" data-number="C">
+<h1 data-number="C"><span class="header-section-number">C</span> Article Sources</h1>
+<ol type="1">
+<li><p>Source Office Injury Statistics - Rethink What You Know About Office Injuries</p>
 <p><a href="https://web.archive.org/web/20240420075620/https://www.aftermath.com/content/office-injury-statistics/">Link</a></p>
 <p><strong>Overview</strong>: States common causes and statistics of office injuries. They make the claim that falling is the most common office related accident, and that office workers are 2 to 2.5 times more likely to suffer an injury than a non-office worker (citing the CDC). It also defined what office falls include.</p>
 <p><strong>Source</strong>: Aftermath</p></li>
@@ -210,6 +242,7 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

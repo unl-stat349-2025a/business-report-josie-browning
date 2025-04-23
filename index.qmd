@@ -1,49 +1,50 @@
-# Preface {.unnumbered}
-
-You are a data scientist for a mid-sized business, in a small group of 3-4 data scientists. You've been tasked with creating a report evaluating a scenario for your business. 
-Your colleagues will also be evaluating the same scenario, and your reports will be used in aggregate to determine a consensus (or lack thereof) on the company's action. 
-The reports will also be used to inform downsizing that is rumored to be coming - you want to ensure your report is better than your peers so that you aren't as easy to cut. 
-
-You may talk to your peers who are assigned the same scenario, but you do not want to collaborate too closely, lest you both become targets of the rumored layoffs. 
-
-
+---
+title: "Introduction"
+editor: 
+  markdown: 
+    wrap: 72
 ---
 
-I've scaffolded this report for you to make this process easier - as we talk about different sections of a report in class and read about how to create similar sections, you will practice by writing the equivalent section of your report.
+# Introduction
 
+Safety in the workplace is the most important priority for any company
+to have. No matter the industry, location, or project, taking measures
+to ensure workers are not at risk of injury is a necessity. It is both
+the responsibility of management and workers to stay informed and
+up-to-date with safety regulations. These rules and regulations can look
+very different industry to industry. In an office setting, some may
+think safety is not a prioritized concern, but that is far from the
+truth. Falls are the leading cause of injuries in an office setting
+[@SurveyOccupationalInjuries], and it is important to understand the
+risks, causes, and ways to reduce the probability of this type of
+injury.
 
-The basic steps for this task are as follows:
+A 2012 article from The Albert Einstein College of Medicine cited the
+Center of Disease Control and Prevention with the claim that "office
+workers are 2 to 2.5 times more likely to suffer an injury from a fall
+than non-office workers" [@WhatAreTop2012]. An analysis into this claim
+may reveal insight on the source and interpretation of the original CDC
+data. It is possible this claim has two slightly different meanings:
 
-- Identify the research question from the business question
+1.  Office workers are more likely to suffer an injury given they had a
+    fall compared to non-office workers.
 
-- Identify data set(s) which are (1) publicly available (you don't have a budget to pay for private data) and (2) relevant to your task
+2.  Office workers are more likely to have a fall that results in an
+    injury compared to non-office workers.
 
-    - (HW Week 6) Document your data sets in `draft-data-doc.qmd`
+In the original claim and this report, any reference to "falls"
+explicitly means falls on the same level, and excludes injuries
+resulting from falls to a different level (which are reported in
+separate categories in CDC and US Bureau survey data). The following
+analysis will compare the number of falls between office and non-office
+workers, and also the number of falls resulting in injury between the
+two groups. The difference between the two interpretations lead to two
+separate concerns: are office workers at higher risk of falling or
+higher risk of suffering an injury from a fall? It is also important to
+remember this data and claim is from 2012 at the latest, and the
+workplace has changed very much in the last decade.
 
-- Conduct a statistical analysis to support your answer to your research and business questions
-
-    - Write a methods section for your business report corresponding to your statistical analysis
-
-    - (HW Week 9) Draft of results section of business report with relevant graphics/visual aids in `draft-results.qmd`
-    
-- Write your report
-
-    - (HW Week 10) Draft of Intro/Conclusion sections in `draft-intro-conclusions.qmd`
-    
-    - (HW Week 11) Draft of Executive summary section in `draft-exec-summary.qmd`
-    
-- Revise your report
-
-    - (HW Week 12 -- not turned in) Revise your report
-    
-    - (HW Week 13) - Rough draft of report due. Create one or more qmd files for your report (you can overwrite or delete intro.qmd and summary.qmd), include the names of each file (in order) in `_quarto.yml`. You should use references (edit references.bib and use pandoc citations). Make sure your report compiles and looks reasonable in both html and pdf. 
-    
-    - Develop a presentation to go along with your report (Week 13). Create slides for your report using quarto. 
-
-- Peer revise reports
-
-    - Peer revise reports
-    
-    - (HW Week 14) - Make edits to your report from comments received from peer review
-
-- Final report & presentation due
+While the claim may have held truth at the time, based on my research
+and analysis of 2023 CDC data, this claim is false in both
+interpretations. Non-office workers are about 1.5 times more likely to
+suffer an injury from a fall than an office worker.

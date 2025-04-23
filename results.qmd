@@ -7,41 +7,6 @@ editor:
 
 # Results
 
-## Descriptive Statistics
-
-In my analysis I worked with two datasets from the U.S. Bureau of Labor
-Statistics. I first used 2021-2022 data covering work injuries and
-illnesses detailed by source and industry [@SurveyOccupationalInjuries].
-Secondly, I examined workplace recordable injury rates by industry using
-2023 data [@TABLE1Incidence]. I categorized the data into office and
-non-office jobs based on the NAICS codes. I choose to make decisions on
-the 3-digit level of the codes, so there are several sub-industries with
-4 and 5-digit codes that are within the chosen "office" industries. The
-category of office jobs includes the following:
-
--   Information (511, 517, 518, 519)
-
--   Finance and Insurance (521, 522, 523, 524)
-
--   Real Estate (531, 532)
-
--   Legal Services and Accounting (541)
-
--   Management (551)
-
--   Administrative Support (561).
-
-I made the assumption that a blank observation (indicated by a dash)
-represented a zero, not an NA. Entries with actual NA values were
-removed.
-
-For the first dataset, there were 2936 raw observations, and 258
-sections at the 3-digit NAICS code level. After I split the data, there
-were 83 non-office industries and 13 office industries (listed above).
-
-For the second dataset, it contained 1074 raw observations, 87
-subsections with 74 non-office and 13 office.
-
 ## Primary Findings
 
 ### Mean Slips and Falls

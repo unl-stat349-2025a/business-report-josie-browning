@@ -2,7 +2,9 @@
 title: "Draft: Data Documentation"
 ---
 
-# Data Sources
+# Data Documentation
+
+## Data Sources
 
 1.  Survey of Occupational Injuries and Illnesses Data - R4 Detailed Industry by Selected Events or Exposures, 2021-22
 
@@ -32,7 +34,7 @@ title: "Draft: Data Documentation"
 
     **Source**: U.S. Bureau of Labor Statistics
 
-# Article Sources
+## Article Sources
 
 1.  Source Office Injury Statistics - Rethink What You Know About Office Injuries
 

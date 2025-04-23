@@ -9,7 +9,6 @@ book:
     left: "Copyright 2025, Josie Browning"
   chapters:
     - index.qmd
-    - intro.qmd
     - methods.qmd
     - results.qmd
     - discussion.qmd

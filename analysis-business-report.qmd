@@ -10,7 +10,7 @@ library(tidyr)
 library(stringr)
 ```
 
-Steps: - Using CDC or BoS, find the difference between falls of office workers and non-office workers. See if I can identify where the numbers in the claims come from. - identify solid reason why that number is stupid as fuck to use (raw statistic) - break down of injuries for office workers - look into details of office worker falls, severity/cause - maybe compare to severity of non-office worker injuries
+Steps: - Using CDC or BLS, find the difference between falls of office workers and non-office workers. See if I can identify where the numbers in the claims come from. - identify solid reason why that number is stupid as fuck to use (raw statistic) - break down of injuries for office workers - look into details of office worker falls, severity/cause - maybe compare to severity of non-office worker injuries
 
 NAICS codes listed associated with "office" jobs:
 
@@ -37,7 +37,7 @@ injuries <- injuries %>%
          total_w_days = as.numeric(total_w_days),
          across(everything(), ~ ifelse(is.na(.), 0, .))) %>%
   filter(nchar(NAICS) == 3)
-
+                                                                                                                                                                                                                                                                                         
 office_codes <- c("^511", "^517", "^518", "^519", "^521", "^522", "^523", "^524", "^531", "^532", "^541", "^551", "^561")
   
 office_jobs <- injuries %>%
