@@ -40,8 +40,6 @@ For clarity and convenience, I renamed several columns to have shorter names wit
 
 For the first dataset, there were 2936 raw observations, and 96 sections at the 3-digit NAICS code level. After I split the data, there were 83 "non-office" industries and 13 "office" industries (listed above). For the second dataset, it contained 1074 raw observations, 87 subsections with 74 "non-office" and 13 "office".
 
-## Analysis 
-
 ### Libraries
 
 I used the following libraries in R studio for my analysis:
@@ -55,5 +53,3 @@ I used the following libraries in R studio for my analysis:
 -   Tidyr: This library has a function "pivot_longer" that I used in one case to reshape a dataframe for easier visualization.
 
 -   Stringr: I used one function "slice_max" to select a certain number of observation from a dataframe. Just like with the tidyr function, I used stringr for reshaping data for easier visualization.
-
-### Process
