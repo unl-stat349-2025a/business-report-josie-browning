@@ -1,0 +1,15 @@
+# Introduction
+
+Safety in the workplace is the most critical priority for any company to have. No matter the industry, location, or project, taking measures to ensure workers are not at risk of injury is a necessity. It is both the responsibility of management and workers to stay informed and up-to-date with safety regulations. These rules and regulations can look very different from industry to industry. Some may think safety is not a prioritized concern in an office setting, but that is far from the truth. Falls are the leading cause of injuries in an office setting \[\@SurveyOccupationalInjuries\], and it is essential to understand the risks, causes, and ways to reduce the probability of this type of injury.
+
+A 2012 article from The Albert Einstein College of Medicine cited the Center of Disease Control and Prevention, claiming that "office workers are 2 to 2.5 times more likely to suffer an injury from a fall than non-office workers" \[\@einstein2012topinjuries\]. An analysis of this claim may reveal insight into the source and interpretation of the original CDC data. This claim may have two slightly different meanings:
+
+1.  Office workers are more likely to suffer an injury, given they had a fall, than non-office workers.
+
+2.  Office workers are more likely to have a fall resulting in an injury than non-office workers.
+
+In the original claim and this report, any reference to "falls" explicitly means falls on the same level and excludes injuries resulting from falls to a different level (reported in separate categories in CDC and US Bureau survey data). The definition of "slips" in this dataset is a trip without a fall, which is still relevant to the company's concern about fall-related safety. The following analysis will compare the number of falls between office and non-office workers and the number of falls resulting in injury between the two groups. The difference between the two interpretations leads to two separate concerns: are office workers at higher risk of falling or suffering an injury from a fall? It is also important to remember that this data and claim are from 2012 at the latest, and the workplace has changed very much in the last decade.
+
+The CDC categorizes falls as a "common workplace injury" that costs \$70 billion in workers' compensation and medical costs each year \[\@cdcFallsWorkplace2024\]. The CDC also cites the industries with the most fall injuries as educational and health services, healthcare and social assistance, residential care, and ambulance services, all considered non-office industries.
+
+While the claim may have held truth at the time, based on my research and analysis of 2023 BLS data, this claim is false in both interpretations. Workers in an office setting are not at a higher risk of injury from a fall than those in a non-office setting \[\@SurveyOccupationalInjuries\]. The data supports the opposite claim: non-office workers are about 2.2 times more likely to suffer an injury from a fall than office workers.

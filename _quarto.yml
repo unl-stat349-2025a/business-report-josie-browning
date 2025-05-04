@@ -4,21 +4,21 @@ project:
 
 book:
   title: "Evaluation of Office Fall Injuries"
-  author: "Josie Browning"
+  author: "Josephine Browning"
   page-footer:
-    left: "Copyright 2025, Josie Browning"
+    left: "Copyright 2025, Josephine Browning"
   chapters:
     - index.qmd
+    - intro.qmd
     - methods.qmd
     - results.qmd
     - discussion.qmd
-    - summary.qmd
     - references.qmd
-  appendices:
-    - draft-data-doc.qmd
-    - draft-results.qmd
-    - draft-intro-conclusions.qmd
-    - draft-exec-summary.qmd
+#  appendices:
+#    - draft-data-doc.qmd
+#    - draft-results.qmd
+#    - draft-intro-conclusions.qmd
+#    - draft-exec-summary.qmd
 
 bibliography: references.bib
 

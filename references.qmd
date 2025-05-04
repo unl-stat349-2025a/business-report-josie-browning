@@ -1,4 +1,23 @@
 # References {.unnumbered}
 
 ::: {#refs}
+@SurveyOccupationalInjuries
+
+@TABLE1Incidence
+
+@cdcFallsWorkplace2024
+
+@einstein2012topinjuries
+
+@RecordkeepingNonMandatoryAppendix
+
+@dplyr
+
+@ggplot2
+
+@readxl
+
+@tidyr
+
+@stringr
 :::

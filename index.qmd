@@ -1,50 +1,7 @@
----
-title: "Introduction"
-editor: 
-  markdown: 
-    wrap: 72
----
+# Summary
 
-# Introduction
+For the last sixty years, Halpert & Co. has prioritized the safety of its employees in all areas of the company. Due to a discovered research claim, there has been a recent rise in concern about the risk of injury in office spaces. A 2012 article from The Albert Einstein College of Medicine cited the Center for Disease Control and Prevention, claiming that "office workers are 2 to 2.5 times more likely to suffer an injury from a fall than non-office workers" [@einstein2012topinjuries].
 
-Safety in the workplace is the most important priority for any company
-to have. No matter the industry, location, or project, taking measures
-to ensure workers are not at risk of injury is a necessity. It is both
-the responsibility of management and workers to stay informed and
-up-to-date with safety regulations. These rules and regulations can look
-very different industry to industry. In an office setting, some may
-think safety is not a prioritized concern, but that is far from the
-truth. Falls are the leading cause of injuries in an office setting
-[@SurveyOccupationalInjuries], and it is important to understand the
-risks, causes, and ways to reduce the probability of this type of
-injury.
+Analyzing 2023 survey data from the US Bureau of Labor Statistics, I found an opposing result of office workers being about 2.2 times less likely to suffer an injury from a fall than a non-office worker [@SurveyOccupationalInjuries]. Overall, non-office industries report 3.5 times the number of injuries as office industries and 3.6 times the number of injuries that result in needing time away from work [@TABLE1Incidence]. This result strongly suggests that non-office workers are at higher risk of being injured and suffering an injury of higher severity.
 
-A 2012 article from The Albert Einstein College of Medicine cited the
-Center of Disease Control and Prevention with the claim that "office
-workers are 2 to 2.5 times more likely to suffer an injury from a fall
-than non-office workers" [@WhatAreTop2012]. An analysis into this claim
-may reveal insight on the source and interpretation of the original CDC
-data. It is possible this claim has two slightly different meanings:
-
-1.  Office workers are more likely to suffer an injury given they had a
-    fall compared to non-office workers.
-
-2.  Office workers are more likely to have a fall that results in an
-    injury compared to non-office workers.
-
-In the original claim and this report, any reference to "falls"
-explicitly means falls on the same level, and excludes injuries
-resulting from falls to a different level (which are reported in
-separate categories in CDC and US Bureau survey data). The following
-analysis will compare the number of falls between office and non-office
-workers, and also the number of falls resulting in injury between the
-two groups. The difference between the two interpretations lead to two
-separate concerns: are office workers at higher risk of falling or
-higher risk of suffering an injury from a fall? It is also important to
-remember this data and claim is from 2012 at the latest, and the
-workplace has changed very much in the last decade.
-
-While the claim may have held truth at the time, based on my research
-and analysis of 2023 CDC data, this claim is false in both
-interpretations. Non-office workers are about 1.5 times more likely to
-suffer an injury from a fall than an office worker.
+Despite the conclusion that office workers are at lower risk of injuries and falls, stronger safety policies in office spaces would not be a waste of time or resources. About 17.76% of all reported office injuries are falls on the same level, with the most common causes of the fall being misusing ladders, water or contaminants on floors, and tripping hazards in walkways [@cdcFallsWorkplace2024]. Implementing safety training to use equipment and proper handling of spills and clutter hazards can significantly reduce the risk of fall injuries in the office.

@@ -1,10 +1,8 @@
----
-title: "Draft: Data Documentation"
----
-
 # Data Documentation
 
 ## Data Sources
+
+{#data-documentation}
 
 1.  Survey of Occupational Injuries and Illnesses Data - R4 Detailed Industry by Selected Events or Exposures, 2021-22
 

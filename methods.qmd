@@ -1,22 +1,20 @@
----
-title: "Methods"
----
-
 # Methods
 
-## Data Sources 
+## Data Sources
 
-In my analysis I worked with two datasets from the U.S. Bureau of Labor Statistics. I first used the Survey of Occupational Injuries and Illnesses data, which covers reported work-related injuries and are detailed by source and industry [@SurveyOccupationalInjuries]. This data is collected biennually, and the most recently available data is 2021-2022. I used this data to identify the specific number of injuries sustained by office workers in this time period, and further identified the injuries related to falls, trips, and slips. With these detailed variables in the dataset, I was able to compare the number of fall-related injuries between "office" and "non-office" industries.
+Two datasets were used in this analysis from the U.S. Bureau of Labor Statistics. First, the Survey of Occupational Injuries and Illnesses data was used, which covers reported work-related injuries and are detailed by source and industry [@SurveyOccupationalInjuries]. This data is collected biennially, and the most recently available data is 2021-2022. This data was used to identify the specific number of injuries sustained by office workers in this time period, and further identified the injuries related to falls, trips, and slips. With these detailed variables in the dataset, it was possible to compare the number of fall-related injuries between "office" and "non-office" industries.
 
-Secondly, I examined the Injury Incidence Rates in workplaces detailed by industry and case type [@TABLE1Incidence]. This data includes injuries reported in 2023 that involved time away from work, which I used as a measure of severity in the work-related injuries. By looking at the total injuries reported, I was able to compare the number of "severe" injuries between "office" and "non-office" industries.
+Secondly, the Injury Incidence Rates per 100 workers detailed by industry and case type was used [@TABLE1Incidence]. This data includes injuries reported in 2023 that involved time away from work, which was used as a measure of severity in the work-related injuries. By looking at the total injuries reported, the number of "severe" injuries between "office" and "non-office" industries was compared.
 
-The U.S. Bureau of Labor Statistics used the North American Industry Classification System (NAICS). These codes easily identify industries on both a broad and specific level, depending on the number of digits in the code (2-6). This code is how I defined "office" and "non-office" industry.
+The U.S. Bureau of Labor Statistics used the North American Industry Classification System (NAICS). These codes easily identify industries on both a broad and specific level, depending on the number of digits in the code (2-6). This code is how "office" and "non-office" industry were defined.
 
-An important note about both these dataset is that they include hierarchical entries, meaning some rows represent aggregate totals for a broader industry, followed by rows that represent subindustry counts. In these cases, the broader row count represents the sum of all subsequent subindustries. For my analysis, only one specified level of data was used to avoid double-counting.
+An important note about both these dataset is that they include hierarchical entries, meaning some rows represent aggregate totals for a broader industry, followed by rows that represent subindustry counts. In these cases, the broader row count represents the sum of all subsequent subindustries. For the analysis, only one specified level of data was used to avoid double-counting.
+
+Further information on the datasets used can be found in the data documentation section of the appendix @data-documention.
 
 ## Classification Method
 
-To categorize the industry using NAICS codes, I choose to section the industies on the 3-digit level of the codes, so the several subindustries with 4,5, or 6 digit codes are grouped in with their respective broader industry. The categories of "office" industries includes the following:
+To categorize the industry using NAICS codes, the industries on the 3-digit level of the codes were chosen, so the several subindustries with 4,5, or 6 digit codes are grouped in with their respective broader industry. The categories of "office" industries includes the following:
 
 -   Information (511, 517, 518, 519)
 
@@ -30,26 +28,26 @@ To categorize the industry using NAICS codes, I choose to section the industies 
 
 -   Administrative Support (561).
 
-I choose these codes based off of research and inspection of the code list in the dataset. These decisions are subjective, and all jobs in each industry may not all be true office jobs. There are also likely specific office jobs that are within many other "non-office" industries. It is important to acknowledge that cleanly dividing this data into "office" and "non-office" categories is imperfect, and further analysis with more precise measures could produce slightly different results.
+These codes were identified based off of research and inspection of the code list in the dataset. These decisions are subjective, and all jobs in each industry may not all be true office jobs. There are also likely specific office jobs that are within many other "non-office" industries. It is important to acknowledge that cleanly dividing this data into "office" and "non-office" categories is imperfect, and further analysis with more precise measures could produce slightly different results.
 
 ## Data Cleaning and Assumption
 
-When starting the analysis, I made the assumption that a blank observation (indicated by a dash) represented a zero, not an NA. Entries with actual NA values were removed. There were 186 observations that were removed (on raw data, prior to sectioning with NAICS codes).
+When starting the analysis, the assumption was made that a blank observation (indicated by a dash) represented a zero, not an NA. Entries with actual NA values were removed. There were 186 observations that were removed (on raw data, prior to sectioning with NAICS codes).
 
-For clarity and convenience, I renamed several columns to have shorter names without spaces in them. To section the data by NAICS codes, I filtered the variable for only 3-digit observations, and then split the data using the list of 13 predecided codes.
+For clarity and convenience, several columns were renamed to have shorter names without spaces in them. To section the data by NAICS codes, variables were filtered for only 3-digit observations, and then split the data using the list of 13 predecided codes.
 
-For the first dataset, there were 2936 raw observations, and 96 sections at the 3-digit NAICS code level. After I split the data, there were 83 "non-office" industries and 13 "office" industries (listed above). For the second dataset, it contained 1074 raw observations, 87 subsections with 74 "non-office" and 13 "office".
+For the first dataset, there were 2936 raw observations, and 96 sections at the 3-digit NAICS code level. After the data split, there were 83 "non-office" industries and 13 "office" industries (listed above). For the second dataset, it contained 1074 raw observations, 87 subsections with 74 "non-office" and 13 "office".
 
 ### Libraries
 
-I used the following libraries in R studio for my analysis:
+The following libraries were utilized in R studio for the analysis:
 
--   Readxl: This library allowed me to read in and use both my datasets, which were provided by the BLS in excel files.
+-   readxl: [@readxl] This library was used to read in and use both the datasets, which were provided by the BLS in excel files.
 
--   Dplyr: I used this library for the majority of my data handling, specifically the mutate statement which allowed me to easily manipulate dataframes. The filter and summarize statements were also extremely useful to sectioning the data into "office" and "non-office" dataframes.
+-   dplyr: [@dplyr] This library provided the majority of the data handling, specifically the mutate statement which allowed easy manipulation of dataframes. The filter and summarize statements were also extremely useful to sectioning the data into "office" and "non-office" dataframes.
 
--   Ggplot2: I used the visualization terms in this library to create all graphs used in my analysis.
+-   ggplot2: [@ggplot2] This library was used for the visualization to create all graphs used in the analysis.
 
--   Tidyr: This library has a function "pivot_longer" that I used in one case to reshape a dataframe for easier visualization.
+-   tidyr: [@tidyr] This library has a function "pivot_longer" that was used in one case to reshape a dataframe for easier visualization.
 
--   Stringr: I used one function "slice_max" to select a certain number of observation from a dataframe. Just like with the tidyr function, I used stringr for reshaping data for easier visualization.
+-   stringr: [@stringr] One function was used, "slice_max", to select a certain number of observations from a dataframe. Just like with the tidyr function, stringr was for reshaping data for easier visualization.
