@@ -14,11 +14,11 @@ book:
     - results.qmd
     - discussion.qmd
     - references.qmd
-#  appendices:
-#    - draft-data-doc.qmd
-#    - draft-results.qmd
-#    - draft-intro-conclusions.qmd
-#    - draft-exec-summary.qmd
+  appendices:
+    - draft-data-doc.qmd
+    - draft-results.qmd
+    - draft-intro-conclusions.qmd
+    - draft-exec-summary.qmd
 
 bibliography: references.bib
 
